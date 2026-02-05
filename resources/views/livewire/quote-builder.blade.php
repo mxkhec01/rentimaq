@@ -55,7 +55,7 @@
                                         <div
                                             style="height: 140px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
                                             @if($product->image)
-                                                <img src="{{ \Illuminate\Support\Facades\Storage::url($product->image) }}"
+                                                <img src="{{ Str::startsWith($product->image, 'images/') ? asset($product->image) : \Illuminate\Support\Facades\Storage::url($product->image) }}"
                                                     style="height: 100%; width: 100%; object-fit: cover;">
                                             @else
                                                 <span class="text-muted small">Sin imagen</span>
@@ -129,7 +129,7 @@
                                                 <div class="rounded overflow-hidden mb-2"
                                                     style="height: 60px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; border: 1px solid #eee;">
                                                     @if($item['image'])
-                                                        <img src="{{ \Illuminate\Support\Facades\Storage::url($item['image']) }}"
+                                                        <img src="{{ Str::startsWith($item['image'], 'images/') ? asset($item['image']) : \Illuminate\Support\Facades\Storage::url($item['image']) }}"
                                                             class="img-fluid"
                                                             style="max-height: 100%; max-width: 100%; object-fit: contain;">
                                                     @else

@@ -133,7 +133,7 @@
                     <div class="product-card h-100" wire:click="setActive({{ $product->id }})">
                         <div class="product-img-wrapper">
                             @if($product->image)
-                                <img src="{{ \Illuminate\Support\Facades\Storage::url($product->image) }}" alt="{{ $product->name }}" class="product-img">
+                                <img src="{{ Str::startsWith($product->image, 'images/') ? asset($product->image) : \Illuminate\Support\Facades\Storage::url($product->image) }}" alt="{{ $product->name }}" class="product-img">
                             @else
                                 <div class="text-white-50">Sin Imagen</div>
                             @endif
@@ -187,7 +187,7 @@
                                     <tr wire:click="setActive({{ $product->id }})" wire:key="table-{{ $product->id }}">
                                         <td>
                                             @if($product->image)
-                                                <img src="{{ \Illuminate\Support\Facades\Storage::url($product->image) }}" class="table-img">
+                                                <img src="{{ Str::startsWith($product->image, 'images/') ? asset($product->image) : \Illuminate\Support\Facades\Storage::url($product->image) }}" class="table-img">
                                             @endif
                                         </td>
                                         <td>
@@ -238,7 +238,7 @@
                     <!-- Image Column -->
                     <div class="col-lg-5 d-flex align-items-center justify-content-center p-3" style="min-height: 300px; background-color: rgba(255,255,255,0.05);">
                         @if($activeProduct->image)
-                            <img src="{{ \Illuminate\Support\Facades\Storage::url($activeProduct->image) }}" class="img-fluid" style="max-height: 400px; object-fit: contain;">
+                            <img src="{{ Str::startsWith($activeProduct->image, 'images/') ? asset($activeProduct->image) : \Illuminate\Support\Facades\Storage::url($activeProduct->image) }}" class="img-fluid" style="max-height: 400px; object-fit: contain;">
                         @else
                             <div class="text-muted">Sin Imagen</div>
                         @endif
