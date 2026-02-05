@@ -9,6 +9,8 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class ProductsTable
 {
@@ -16,9 +18,18 @@ class ProductsTable
     {
         return $table
             ->columns([
-                ImageColumn::make('image')
-                    ->disk('public')
-                    ->circular(),
+                TextColumn::make('image')
+                    ->label('Imagen')
+                    ->html()
+                    ->formatStateUsing(function ($state) {
+                        if (empty($state)) {
+                            return '<div style="width: 40px; height: 40px; background-color: #f3f4f6; border-radius: 50%;"></div>';
+                        }
+                        $url = Str::startsWith($state, 'images/')
+                            ? asset($state)
+                            : Storage::url($state);
+                        return '<img src="' . $url . '" style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%;" />';
+                    }),
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
