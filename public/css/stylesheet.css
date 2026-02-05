@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'Blinker Semibold';
+    src: url('fonts/Blinker-SemiBold.eot');
+    src: url('fonts/Blinker-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-SemiBold.woff2') format('woff2'),
+        url('fonts/Blinker-SemiBold.woff') format('woff'),
+        url('fonts/Blinker-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blinker Bold';
+    src: url('fonts/Blinker-Bold.eot');
+    src: url('fonts/Blinker-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-Bold.woff2') format('woff2'),
+        url('fonts/Blinker-Bold.woff') format('woff'),
+        url('fonts/Blinker-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blinker Regular';
+    src: url('fonts/Blinker-Regular.eot');
+    src: url('fonts/Blinker-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-Regular.woff2') format('woff2'),
+        url('fonts/Blinker-Regular.woff') format('woff'),
+        url('fonts/Blinker-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blinker ExtraBold';
+    src: url('fonts/Blinker-ExtraBold.eot');
+    src: url('fonts/Blinker-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-ExtraBold.woff2') format('woff2'),
+        url('fonts/Blinker-ExtraBold.woff') format('woff'),
+        url('fonts/Blinker-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+
+body{
+    background-color: black;
+    color: white;
+    background-image: url(../images/bg.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Blinker Semibold';
+    font-size: 1.3vw;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #666666;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+     color: #ffb009;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #ffb009;
+}
+h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #ffb009;
+    font-family: 'Blinker Bold';
+    font-size: 7vw;
+    line-height: 6vw;
+}
+
+h3{
+    font-family: 'Blinker Regular';
+}
+p{
+    color: #666666;
+    font-size: 1vw;
+}
+.btn-warning{
+    background-color:transparent;
+    background-image: url(../images/bg-btn-cotizacion.svg);
+    background-size: cover;
+    background-position:left;
+    border: none;
+    letter-spacing: 3px;
+    font-family: 'Blinker ExtraBold';
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.3vw;
+}
+
+.btn-success{
+    background-color:transparent;
+    background-image: url(../images/bg-btn-contacto.svg);
+    background-size: cover;
+    background-position:center center;
+    border: none;
+    letter-spacing: 3px;
+    font-family: 'Blinker ExtraBold';
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.3vw;
+    color: white;
+}
+
+
+.btn-warning:hover{
+    color: white;
+    background-color: transparent;
+}
+.btn-success:hover{
+    color: black;
+    background-color: transparent;
+}
+.bg-carousel{
+    background-image: url(../images/bg-corousel.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.c-list{
+    margin-left:-10%;
+}
+.botones-flotantes{
+    position: fixed;
+    bottom: 10%;
+    right: 0px;
+    width: 150px;
+    padding: 0px;
+    text-align: right;
+}
+.botones-flotantes button{
+    letter-spacing: 0px;
+    width: 100%!important;
+    margin-bottom: 20px;
+    font-size: 1vw;
+}
+section{
+    padding-bottom: 100px;
+}
+section h2{
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    margin: 0px;
+}
+section h3{
+    font-size: 2vw;
+    line-height: 3vw;
+    margin: 0px;
+}
+section p{
+    font-size: 1.7vw;
+    line-height: 2vw;
+    margin: 0px;
+    color: white;
+    margin-bottom: 10%;
+}
+
+figcaption{
+    font-family: 'Blinker Regular';
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    margin-top: 20px;
+}
+.title-table{
+    font-family: 'Blinker ExtraBold';
+    font-size: 1.4vw;
+    letter-spacing: 2px;
+    color: black;
+    text-align: center;
+    background-image: url(../images/bg-title-table.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 15%;
+    background-size: 100%;
+    margin-bottom: 0px;
+}
+hr{
+    margin-top: -2px;
+    border-top: 2px solid #ffb009;
+}
+.maquinaria{
+    padding-top: 30px;
+    background-color: #1a1a1a;
+}
+table{
+    font-family: 'Blinker Regular';
+    color: #666666;
+    font-size: 1vw;
+    
+}
+tr:hover{
+    cursor: pointer;
+    color: white;
+    border-bottom: solid 2px #ffb009;
+}
+tr.active{
+    color: white;
+    border-bottom: solid 2px #ffb009;
+}
+
+.mark{
+    font-family: 'Blinker Semibold';
+    color: #666666;
+    margin: 0px;
+    padding: 0px;
+    font-size:1vw;
+    line-height: 1vw;
+    background-color: transparent;
+    margin-top:20px;
+}
+
+.small{
+    font-family: 'Blinker Regular';
+    color: white;
+    font-size:1vw;
+    line-height: 1vw;
+    margin-top:20px;
+    
+}
+
+.lista-categorias{
+    list-style: none;
+    color: #666666;
+    padding:0px;
+    font-family: 'Blinker Regular';
+    font-size: 1.2vw;
+    margin-bottom: 50px;
+}
+
+
+.lista-categorias li{
+    border-bottom: solid 2px #3c3c3c;
+}
+.lista-categorias li:hover{
+    color: white;
+}
+.lista-categorias .active{
+    color: white;
+}
+form{
+    padding: 50px 15px;
+}
+.form-control{
+    background-size: cover;
+    background-image: url(../images/bg-input.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+.form-control:focus{
+    color: white;
+}
+label{
+    font-family: 'Blinker Regular';
+    color: #ffb009;
+    font-size: 1vw;
+}
+.btn-submit{
+    background-color: #ffb009;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    margin: 30px 0px;
+}
+.form-control2{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 991px) {
+    .navbar-light .navbar-nav .nav-link{
+        color: black;
+        font-family: 'Blinker Bold';
+        font-size: 10vw;
+        line-height: 8vw;
+    }
+    .button-close{
+        cursor: pointer;
+        color: black;
+        font-family: 'Blinker Bold';
+        font-size: 9vw;
+        line-height: 8vw;
+    }
+    .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+         color: white;
+    }
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+        color:white;
+    }
+    body{
+        font-size: 3vw;
+    }
+    h2{
+        font-size: 14vw;
+        line-height: 12vw;
+    }
+    h3{
+        font-size: 4vw;
+    }
+    p{
+        font-size: 3vw;
+    }
+    .t{
+        padding-top: 50px;
+    }
+    .btn-warning{
+        width:100%;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        font-size:3vw;
+    }
+    .btn-success{
+        width:100%;
+        margin-top: 30px;
+        font-size: 3vw;
+    }
+    .btn-descubre{
+        background-color:transparent;
+        background-image: url(../images/bg-descubre-mas.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position:center center;
+        border: none;
+        letter-spacing: 3px;
+        font-family: 'Blinker Bold';
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 4.5vw;
+        color: black;
+    }
+    .btn-descubre:hover{
+        color: white;
+    }
+    .navbar-text{
+        padding: 15px;
+        width: 100%;
+        height: 100%;
+        background-color:#ffb009;
+        z-index: 999;
+        position: fixed;
+        top:0px;
+        left:0px;
+        display: none;
+    }
+    .botones-flotantes{
+        background-color: black;
+        position: fixed;
+        bottom: 0%;
+        right: 0px;
+        width: 100%;
+    }
+    .botones-flotantes button{
+        width: auto!important;
+        font-size: 3vw;
+    }
+    .botones-flotantes .btn-warning{
+        float: left;
+    }
+    .botones-flotantes .btn-success{
+        float: right;
+        background-position:left!important;
+    }
+    .botones-flotantes .btn-warning{
+        background-color:transparent;
+        background-image: url(../images/bg-btn-cotizacion-2.svg);
+        background-size: cover;
+        background-position:right;
+    }
+    
+    section{
+        padding-bottom: 100px;
+    }
+    section h2{
+        font-family: 'Blinker Regular';
+        padding-bottom: 60px;
+        font-size: 5.5vw;
+        line-height: 6vw;
+        margin: 0px;
+    }
+    section h3{
+        font-size: 4vw;
+        line-height: 4vw;
+        padding-bottom: 20px;
+        margin: 0px;
+    }
+    section p{
+        color: white;
+        font-size: 4vw;
+        line-height: 4vw;
+        margin: 0px;
+    }
+    
+}

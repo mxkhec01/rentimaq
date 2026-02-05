@@ -1,0 +1,536 @@
+@font-face {
+    font-family: 'Blinker Semibold';
+    src: url('fonts/Blinker-SemiBold.eot');
+    src: url('fonts/Blinker-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-SemiBold.woff2') format('woff2'),
+        url('fonts/Blinker-SemiBold.woff') format('woff'),
+        url('fonts/Blinker-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blinker Bold';
+    src: url('fonts/Blinker-Bold.eot');
+    src: url('fonts/Blinker-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-Bold.woff2') format('woff2'),
+        url('fonts/Blinker-Bold.woff') format('woff'),
+        url('fonts/Blinker-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blinker Regular';
+    src: url('fonts/Blinker-Regular.eot');
+    src: url('fonts/Blinker-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-Regular.woff2') format('woff2'),
+        url('fonts/Blinker-Regular.woff') format('woff'),
+        url('fonts/Blinker-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blinker ExtraBold';
+    src: url('fonts/Blinker-ExtraBold.eot');
+    src: url('fonts/Blinker-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Blinker-ExtraBold.woff2') format('woff2'),
+        url('fonts/Blinker-ExtraBold.woff') format('woff'),
+        url('fonts/Blinker-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    background-image: url(../images/bg.svg);
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: repeat;
+    background-size: auto;
+    font-family: 'Blinker Semibold';
+    font-size: 1.3vw;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #666666;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffb009;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #ffb009;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #ffb009;
+    font-family: 'Blinker Bold';
+    font-size: 7vw;
+    line-height: 6vw;
+}
+
+h3 {
+    font-family: 'Blinker Regular';
+}
+
+p {
+    color: white;
+    font-size: 1vw;
+}
+
+.btn-warning {
+    background-color: transparent;
+    background-image: url(../images/bg-btn-cotizacion.svg);
+    background-size: cover;
+    background-position: left;
+    border: none;
+    letter-spacing: 3px;
+    font-family: 'Blinker ExtraBold';
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.3vw;
+}
+
+.btn-success {
+    background-color: transparent;
+    background-image: url(../images/bg-btn-contacto.svg);
+    background-size: cover;
+    background-position: center center;
+    border: none;
+    letter-spacing: 3px;
+    font-family: 'Blinker ExtraBold';
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.3vw;
+    color: white;
+}
+
+
+.btn-warning:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.btn-success:hover {
+    color: black;
+    background-color: transparent;
+}
+
+.bg-carousel {
+    background-image: url(../images/bg-corousel.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.c-list {
+    margin-left: -10%;
+}
+
+.botones-flotantes {
+    position: fixed;
+    bottom: 10%;
+    right: 0px;
+    width: 250px;
+    padding: 0px;
+    text-align: right;
+}
+
+.botones-flotantes button {
+    letter-spacing: 0px;
+    width: 100% !important;
+    margin-bottom: 20px;
+    font-size: 1.7vw;
+}
+
+section {
+    padding-bottom: 100px;
+}
+
+section h2 {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    margin: 0px;
+}
+
+section h3 {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin: 0px;
+}
+
+section p {
+    font-size: 1.7vw;
+    line-height: 2vw;
+    margin: 0px;
+    color: white;
+    margin-bottom: 10%;
+}
+
+figcaption {
+    font-family: 'Blinker Regular';
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    margin-top: 20px;
+}
+
+.title-table {
+    font-family: 'Blinker ExtraBold';
+    font-size: 1.4vw;
+    letter-spacing: 2px;
+    color: black;
+    text-align: center;
+    background-image: url(../images/bg-title-table.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 15%;
+    background-size: 100%;
+    margin-bottom: 0px;
+}
+
+hr {
+    margin-top: -2px;
+    border-top: 2px solid #ffb009;
+}
+
+.maquinaria {
+    padding-top: 30px;
+    background-color: #1a1a1a;
+}
+
+.t-lista {
+    height: 700px;
+    overflow: scroll;
+}
+
+
+table {
+    font-family: 'Blinker Regular';
+    color: white;
+    font-size: 1.4vw;
+
+}
+
+tr,
+.bb {
+    border-bottom: solid 2px white;
+}
+
+tr:hover {
+    cursor: pointer;
+    color: white;
+    border-bottom: solid 2px #ffb009;
+}
+
+tr.active {
+    color: white;
+    border-bottom: solid 2px #ffb009;
+}
+
+tr .col-5 {
+    padding-left: 0px;
+}
+
+.bb .col-5 {
+    padding-left: 0px;
+}
+
+.table td,
+.table th {
+    border-top: none !important;
+}
+
+.mark {
+    font-family: 'Blinker Semibold';
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.small {
+    font-family: 'Blinker Regular';
+    color: white;
+    font-size: 1.3vw;
+    line-height: 1.3vw;
+    margin-top: 20px;
+
+}
+
+.lista-categorias {
+    list-style: none;
+    color: white;
+    padding: 0px;
+    font-family: 'Blinker Regular';
+    font-size: 1.5vw;
+    margin-bottom: 50px;
+}
+
+
+.lista-categorias li {
+    border-bottom: solid 2px #3c3c3c;
+}
+
+.lista-categorias li:hover {
+    color: white;
+}
+
+.lista-categorias .active {
+    color: white;
+}
+
+form {
+    padding: 50px 15px;
+}
+
+.form-control {
+    background-size: cover;
+    /**background-image: url(../images/bg-input.svg);**/
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black !important;
+}
+
+.form-control:focus {
+    color: white;
+}
+
+label {
+    font-family: 'Blinker Regular';
+    color: #ffb009;
+    font-size: 1.4vw;
+}
+
+.btn-submit {
+    font-size: 1.6vw;
+    background-color: #ffb009;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    margin: 30px 0px;
+}
+
+.form-control2 {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.st1 {
+    font-size: 1.3vw;
+    color: #ffb009;
+    line-height: 2vw;
+    padding-left: 5%;
+}
+
+
+.prod-iz {
+    display: none;
+}
+
+.prod-iz.active {
+    display: block;
+}
+
+@media (max-width: 1300px) {
+    .t-lista {
+        height: 350px;
+        overflow: scroll;
+    }
+
+    .botones-flotantes {
+        width: 180px;
+    }
+
+    .botones-flotantes button {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .t-lista {
+        height: 300px;
+        overflow: scroll;
+    }
+
+    .bb {
+        font-size: 2.5vw;
+    }
+
+    .navbar-text {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(20, 20, 20, 0.98);
+        /* Deep dark background */
+        backdrop-filter: blur(10px);
+        /* Glass effect */
+        z-index: 9999;
+        /* Higher z-index to ensure it covers everything */
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: white;
+        /* White text for contrast */
+        font-family: 'Blinker Bold';
+        font-size: 6vw;
+        /* Reduced from 10vw for cleaner look */
+        line-height: 8vw;
+        letter-spacing: 1px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        color: #ffb009;
+        /* Yellow accent on hover */
+        text-decoration: none;
+        padding-left: 10px;
+        /* Subtle movement */
+    }
+
+    .active .nav-link {
+        color: #ffb009 !important;
+    }
+
+    .button-close {
+        cursor: pointer;
+        color: white;
+        /* White X */
+        font-family: 'Blinker Bold';
+        font-size: 6vw;
+        /* Reduced size */
+        line-height: 6vw;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .button-close:hover {
+        opacity: 1;
+        color: #ffb009;
+    }
+
+    .botones-flotantes {
+        background-color: black;
+        position: fixed;
+        bottom: 0%;
+        right: 0px;
+        width: 100%;
+    }
+
+    .botones-flotantes button {
+        width: auto !important;
+        font-size: 4vw;
+    }
+
+    .botones-flotantes .btn-warning {
+        float: left;
+    }
+
+    .botones-flotantes .btn-success {
+        float: right;
+        background-position: left !important;
+    }
+
+    .botones-flotantes .btn-warning {
+        background-color: transparent;
+        background-image: url(../images/bg-btn-cotizacion-2.svg);
+        background-size: cover;
+        background-position: right;
+    }
+
+    section {
+        padding-bottom: 100px;
+    }
+
+    section h2 {
+        font-family: 'Blinker Regular';
+        padding-bottom: 60px;
+        font-size: 5.5vw;
+        line-height: 6vw;
+        margin: 0px;
+    }
+
+    section h3 {
+        font-size: 6vw;
+        line-height: 6vw;
+        padding-bottom: 20px;
+        margin: 0px;
+    }
+
+    section p {
+        color: white;
+        font-size: 4vw;
+        line-height: 4vw;
+        margin: 0px;
+    }
+
+    figcaption {
+        font-size: 3vw;
+        line-height: 3.5vw;
+    }
+
+    .title-table {
+        font-size: 5vw;
+        width: 40%;
+    }
+
+    table {
+        font-family: 'Blinker Regular';
+        font-size: 2.8vw;
+    }
+
+    .mark {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+        padding: 15px;
+    }
+
+    .small {
+        font-size: 3vw;
+        line-height: 3vw;
+        padding: 15px;
+    }
+
+    .lista-categorias {
+        font-size: 4vw;
+    }
+
+    label {
+        font-size: 4vw;
+    }
+
+    .btn-submit {
+        font-size: 5.5vw;
+        float: right;
+    }
+
+    .st1 {
+        padding-left: 5%;
+        font-size: 4vw;
+        line-height: 4vw;
+    }
+}
