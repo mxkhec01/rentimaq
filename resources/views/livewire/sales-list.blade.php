@@ -28,7 +28,7 @@
         justify-content:center; 
         border-bottom:1px solid rgba(255, 255, 255, 0.1); 
     }
-    .product-img { width:100%; height:100%; object-fit:cover; }
+    .product-img { width:100%; height:100%; object-fit:contain; padding: 15px; }
     .product-body { padding:20px; display:flex; flex-direction:column; justify-content:space-between; height:calc(100% - 200px); }
     .product-category { font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; color:#ffc107; font-weight:700; margin-bottom:8px; }
     .product-title { font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:10px; line-height:1.3; }
