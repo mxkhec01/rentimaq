@@ -29,6 +29,7 @@
 
                             <form action="{{ route('contact.store') }}" method="post">
                                 @csrf
+                                @include('components.antispam-fields')
                                 <input type="hidden" name="type" value="Facturación">
 
                                 <!-- Fiscal Data Section -->

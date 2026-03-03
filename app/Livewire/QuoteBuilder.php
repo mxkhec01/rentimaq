@@ -2,10 +2,12 @@
 
 namespace App\Livewire;
 
+use App\Mail\QuoteRequested;
 use App\Models\Product;
 use App\Models\Contact;
+use App\Services\EmailRecipientService;
 use Livewire\Component;
-use Illuminate\Support\Facades\Mail; // Future use if mailing
+use Illuminate\Support\Facades\Mail;
 use Livewire\WithPagination;
 
 class QuoteBuilder extends Component
@@ -190,6 +192,11 @@ class QuoteBuilder extends Component
 
         $contact->message = $msg;
         $contact->save();
+
+        // Send email notification to configured recipients
+        $recipientService = app(EmailRecipientService::class);
+        $recipients = $recipientService->getRecipients('cotizacion');
+        Mail::to($recipients)->send(new QuoteRequested($contact));
 
         // Reset and Notify
         $this->reset(['quoteItems', 'contact']);

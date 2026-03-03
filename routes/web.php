@@ -18,6 +18,11 @@ Route::get('/facturacion', [PageController::class, 'invoicing'])->name('invoicin
 Route::get('/cotizacion', [QuoteController::class, 'index'])->name('quote');
 Route::get('/contacto', [ContactController::class, 'index'])->name('contact');
 
-// Form submissions
-Route::post('/cotizacion', [QuoteController::class, 'store'])->name('quote.store');
-Route::post('/contacto', [ContactController::class, 'store'])->name('contact.store');
+// Form submissions (anti-spam: honeypot + timestamp + rate limit)
+Route::post('/cotizacion', [QuoteController::class, 'store'])
+    ->name('quote.store')
+    ->middleware(['throttle:5,1', \App\Http\Middleware\SpamProtection::class]);
+
+Route::post('/contacto', [ContactController::class, 'store'])
+    ->name('contact.store')
+    ->middleware(['throttle:5,1', \App\Http\Middleware\SpamProtection::class]);
