@@ -53,10 +53,10 @@
                                         </div>
 
                                         <div
-                                            style="height: 140px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
+                                            style="height: 140px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f8f9fa; padding: 10px;">
                                             @if($product->image)
                                                 <img src="{{ Str::startsWith($product->image, 'images/') ? asset($product->image) : \Illuminate\Support\Facades\Storage::url($product->image) }}"
-                                                    style="height: 100%; width: 100%; object-fit: cover;">
+                                                    style="height: 100%; width: 100%; object-fit: contain;">
                                             @else
                                                 <span class="text-muted small">Sin imagen</span>
                                             @endif
