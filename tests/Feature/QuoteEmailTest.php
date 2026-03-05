@@ -63,7 +63,7 @@ class QuoteEmailTest extends TestCase
             ->set('contact.city', 'León')
             ->call('submitQuote');
 
-        Mail::assertQueued(QuoteRequested::class, function (QuoteRequested $mail): bool {
+        Mail::assertSent(QuoteRequested::class, function (QuoteRequested $mail): bool {
             return $mail->contact->name === 'María García'
                 && $mail->contact->company === 'Obras MG';
         });
@@ -86,7 +86,7 @@ class QuoteEmailTest extends TestCase
             ->set('contact.city', 'Querétaro')
             ->call('submitQuote');
 
-        Mail::assertQueued(QuoteRequested::class, function (QuoteRequested $mail): bool {
+        Mail::assertSent(QuoteRequested::class, function (QuoteRequested $mail): bool {
             $items = $mail->contact->metadata['items'] ?? [];
 
             return count($items) === 1
@@ -108,7 +108,7 @@ class QuoteEmailTest extends TestCase
             ->call('submitQuote')
             ->assertHasErrors(['quoteItems']);
 
-        Mail::assertNothingQueued();
+        Mail::assertNothingSent();
         $this->assertDatabaseCount('contacts', 0);
     }
 }

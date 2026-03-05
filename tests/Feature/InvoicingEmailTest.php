@@ -55,7 +55,7 @@ class InvoicingEmailTest extends TestCase
             'email' => 'fiscal@constructora.com',
         ]);
 
-        Mail::assertQueued(FacturacionMail::class, function (FacturacionMail $mail): bool {
+        Mail::assertSent(FacturacionMail::class, function (FacturacionMail $mail): bool {
             return $mail->contact->name === 'Constructora ABC S.A. de C.V.'
                 && ($mail->contact->metadata['rfc'] ?? '') === 'CABC850101XYZ';
         });
@@ -72,7 +72,7 @@ class InvoicingEmailTest extends TestCase
 
         $response->assertSessionHasErrors(['razon_social', 'rfc', 'email', 'cuenta_pago', 'calle']);
 
-        Mail::assertNothingQueued();
+        Mail::assertNothingSent();
         $this->assertDatabaseCount('contacts', 0);
     }
 
