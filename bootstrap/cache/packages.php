@@ -175,6 +175,13 @@
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
     ),
   ),
+  'plesk/ext-laravel-integration' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'PleskExtLaravel\\Providers\\ConsoleServiceProvider',
+    ),
+  ),
   'ryangjchandler/blade-capture-directive' => 
   array (
     'aliases' => 
