@@ -49,7 +49,7 @@ class ContactEmailTest extends TestCase
             'company' => 'Constructora XYZ',
         ]);
 
-        Mail::assertSent(ContactoMail::class, function (ContactoMail $mail): bool {
+        Mail::assertQueued(ContactoMail::class, function (ContactoMail $mail): bool {
             return $mail->contact->name === 'Juan Pérez'
                 && $mail->contact->company === 'Constructora XYZ';
         });
@@ -66,7 +66,7 @@ class ContactEmailTest extends TestCase
 
         $response->assertSessionHasErrors(['nombre', 'correo', 'empresa', 'asunto']);
 
-        Mail::assertNothingSent();
+        Mail::assertNothingQueued();
         $this->assertDatabaseCount('contacts', 0);
     }
 
@@ -95,6 +95,6 @@ class ContactEmailTest extends TestCase
         $this->assertDatabaseCount('contacts', 1);
 
         // No email queued because no active recipients
-        Mail::assertNothingSent();
+        Mail::assertNothingQueued();
     }
 }
