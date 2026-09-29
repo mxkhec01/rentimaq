@@ -37,14 +37,15 @@ ssh root@huguete.com
 ```
 
 ### 2.3 Ubicación del Proyecto en el Servidor
-En Plesk, los sitios web se alojan típicamente en:
+La ruta exacta de la instalación en este servidor es:
 ```bash
-cd /var/www/vhosts/<nombre-del-dominio>/httpdocs
+cd /var/www/vhosts/huguete.com/rentimaq.huguete.com
 ```
-*(Donde `<nombre-del-dominio>` corresponde al dominio configurado para Rentimaq, por ejemplo `rentimaq.com`)*.
 
 > [!IMPORTANT]
-> La raíz web pública (**Document Root**) en la configuración del dominio en Plesk debe apuntar obligatoriamente a `/httpdocs/public`, nunca a la raíz del proyecto.
+> La raíz web pública (**Document Root**) en la configuración del dominio en Plesk apunta a:
+> `/var/www/vhosts/huguete.com/rentimaq.huguete.com/public`
+> *(Aplica tanto para `rentimaq.com` como para el subdominio `rentimaq.huguete.com`)*.
 
 ---
 
